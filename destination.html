@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="This is a space tourism site. Created by ttoommas.">
+
+    <link rel="stylesheet" type="text/css" href="style/destination.css">
+    <link rel="stylesheet" type="text/css" href="style/global.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/shared/logo.svg">
+
+    <title>Space tourism website</title>
+</head>
+<body class="preload">
+
+<!-- Header -->
+    <header id="header" class="header">
+        <nav class="container header__flexbx">
+            <a href="index.html" class="header__logo"><img src="assets/shared/logo.svg" alt="logo"></a>
+
+            <a id="btnHamburger" class="header__toggle hide__tablet_desktop">
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
+
+            <span class="header__middle__line hide__tablet_mobile"></span>
+
+            <div class="header__links hide__mobile">
+                <a href="index.html"><span class="hide__tablet">00</span>Home</a>
+                <a href="destination.html"><span class="hide__tablet">01</span>Destination</a>
+                <a href="crew.html"><span class="hide__tablet">02</span>Crew</a>
+                <a href="technology.html"><span class="hide__tablet">03</span>Technology</a>
+            </div>
+
+            <div class="header__mobile__menu hide__tablet_desktop">
+                <a class="mobile__home" href="index.html"><span>00</span>Home</a>
+                <a class="mobile__destination" href="destination.html"><span>01</span>Destination</a>
+                <a class="mobile__crew" href="crew.html"><span>02</span>Crew</a>
+                <a class="mobile__technology" href="technology.html"><span>03</span>Technology</a>
+            </div>
+        </nav>
+
+        <div id="destination" class="destination">
+            <div class="destination__left">
+                <div class="destination__pick"><span class="pick__number">01</span>Pick your destination</div>
+                <div id="destination__img__container" class="destination__img__container">
+                    <img class="destination__img start" data-imgs="moon" src="./assets/destination/image-moon.webp" alt="moon">
+                    <img class="destination__img" data-imgs="mars" src="./assets/destination/image-mars.webp" alt="moon">
+                    <img class="destination__img" data-imgs="europa" src="./assets/destination/image-europa.webp" alt="moon">
+                    <img class="destination__img" data-imgs="titan" src="./assets/destination/image-titan.webp" alt="moon">
+                </div>
+            </div>
+
+            <div id="destination__right" class="destination__right">
+                <div id="destination__links" class="destination__links">
+                    <a class="btn start" data-link="moon">moon</a>
+                    <a class="btn" data-link="mars">mars</a>
+                    <a class="btn" data-link="europa">europa</a>
+                    <a class="btn" data-link="titan">titan</a>
+                </div>
+
+                <div class="bx__right__content">
+                    <div class="right__content active start" id="moon">
+                        <h1 class="destination__title">moon</h1>
+                        <p class="destination__text">See our planet as you’ve never seen it before. A perfect relaxing trip away to help regain perspective and come back refreshed. While you’re there, take in some history by visiting the Luna 2 and Apollo 11 landing sites.</p>
+
+                        <div class="destination__description">
+                            <div class="description__distance">
+                                <div class="description__text">avg. distance</div>
+                                <div class="description__number">384,400 km</div>
+                            </div>
+                            <div class="description__travel">
+                                <div class="description__text">Est. travel time</div>
+                                <div class="description__number">3 days</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="right__content" id="mars">
+                        <h1 class="destination__title">mars</h1>
+                        <p class="destination__text">Don’t forget to pack your hiking boots. You’ll need them to tackle Olympus Mons, the tallest planetary mountain in our solar system. It’s two and a half times the size of Everest!</p>
+
+                        <div class="destination__description">
+                            <div class="description__distance">
+                                <div class="description__text">avg. distance</div>
+                                <div class="description__number">225 mil. km</div>
+                            </div>
+                            <div class="description__travel">
+                                <div class="description__text">Est. travel time</div>
+                                <div class="description__number">9 months</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="right__content" id="europa">
+                        <h1 class="destination__title">europa</h1>
+                        <p class="destination__text">The smallest of the four Galilean moons orbiting Jupiter, Europa is a winter lover’s dream. With an icy surface, it’s perfect for a bit of ice skating, curling, hockey, or simple relaxation in your snug wintery cabin.</p>
+
+                        <div class="destination__description">
+                            <div class="description__distance">
+                                <div class="description__text">avg. distance</div>
+                                <div class="description__number">628 mil. km</div>
+                            </div>
+                            <div class="description__travel">
+                                <div class="description__text">Est. travel time</div>
+                                <div class="description__number">3 years</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="right__content" id="titan">
+                        <h1 class="destination__title">titan</h1>
+                        <p class="destination__text">The only moon known to have a dense atmosphere other than Earth, Titan is a home away from home (just a few hundred degrees colder!). As a bonus, you get striking views of the Rings of Saturn.</p>
+
+                        <div class="destination__description">
+                            <div class="description__distance">
+                                <div class="description__text">avg. distance</div>
+                                <div class="description__number">1.6 bil. km</div>
+                            </div>
+                            <div class="description__travel">
+                                <div class="description__text">Est. travel time</div>
+                                <div class="description__number">7 years</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+<!-- Js -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="js/main.js"></script>
+<script src="js/destination.js"></script>
+
+</body>
+</html>

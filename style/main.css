@@ -1,0 +1,198 @@
+/*Menu*/
+
+@media only screen and (max-width: 44.9375em){
+	.header{
+		background-image: url("../assets/home/background-home-mobile.png");
+	}
+}
+@media only screen and (min-width: 45em) and (max-width: 61.9375em){
+	.header{
+		background-image: url("../assets/home/background-home-tablet.png");
+	}
+}
+@media only screen and (min-width: 62em){
+	.header{
+		background-image: url("../assets/home/background-home-desktop.png");
+	}
+}
+
+@media only screen and (min-width: 45em){
+	.header__links a:nth-child(1)::before{
+		width: 100%;
+		opacity: 1;
+	}
+}
+.header__mobile__menu a:nth-child(1)::before{	/*For active menu*/
+	height: 31px;
+	opacity: 1;
+}
+/*Hamburger animation*/
+.header__toggle.open > span:first-child{
+	transform: rotate(45deg);
+}
+.header__toggle.open > span:nth-child(2){
+	opacity: 0;
+}
+.header__toggle.open > span:last-child{
+	transform: rotate(-45deg);
+}
+
+/*Mobile menu open*/
+.header__mobile__menu{
+	position: fixed;
+	width: 15.875rem;
+	height: 100vh;
+	right: 0;
+	top: 0;
+	z-index: 1;
+	backdrop-filter: blur(13px);
+	background: linear-gradient(rgba(255,255,255,0.04) 0%, rgba(255,255,255,0.09) 50%, rgba(255,255,255,0.04) 100%);
+	transform: translateX(100%);
+	transition: all 300ms ease-in-out;
+}
+.header__mobile__menu.open{
+	transform: translateX(0);
+}
+.header__mobile__menu a:first-child{
+	margin-top: 7.5rem;
+}
+
+/*Header - content*/
+
+.header__content{
+}
+.header__content__text{
+	margin: auto;
+	text-align: center;
+	width: 20.4375rem;
+	padding-top: 3rem;
+}
+.content__headline{
+	color: var(--light-blue);
+	font-family: var(--barlow-condensed);
+	font-weight: 400;
+	text-transform: uppercase;
+	letter-spacing: 2.7px;
+}
+.content__title{
+	color: var(--white);
+	font-family: var(--bellefair);
+	font-size: 5rem;
+	font-weight: 400;
+	text-transform: uppercase;
+	margin: 1rem 0;
+}
+.content__text{
+	color: var(--light-blue);
+	font-family: var(--barlow);
+	font-weight: 400;
+	font-size: 0.9375rem;
+	margin-bottom: 4.5rem;
+	line-height: 25px;
+}
+.content__button{
+	width: 9.375rem;
+	height: 9.375rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: auto;
+	background-color: var(--white);
+	border-radius: 50%;
+}
+.content__button__text{
+	color: var(--light-black);
+	font-family: var(--bellefair);
+	font-size: 1.25rem;
+	font-weight: 400;
+	text-transform: uppercase;
+}
+
+@media only screen and (min-width: 45em) and (max-width: 61.9375em){	/*Tablet*/
+	.header__content__text{
+		width: 27.875rem;
+		padding-top: 6.625rem;
+	}
+	.content__headline{
+		font-size: 1.25rem;
+		letter-spacing: 3.38px;
+	}
+	.content__title{
+		font-size: 9.375rem;
+		margin: 1.5rem 0;
+	}
+	.content__text{
+		font-size: 1rem;
+		line-height: 28px;
+		margin-bottom: 9.75rem;
+	}
+	.content__button{
+		width: 15.125rem;
+		height: 15.125rem;
+	}
+	.content__button__text{
+		font-size: 2rem;
+		letter-spacing: 2px;
+	}
+}
+
+@media only screen and (min-width: 62em){	/*Desktop*/
+	.header__content__text{
+		position: absolute;
+		left: 10.3125rem;
+		bottom: 8.1875rem;
+		width: 28.125rem;
+		text-align: left;
+		padding-top: 0;
+	}
+	.content__headline{
+		font-size: 1.75rem;
+		letter-spacing: 4.72px;
+	}
+	.content__title{
+		font-size: 9.375rem;
+		margin: 1.5rem 0;
+	}
+	.content__text{
+		font-size: 1.125rem;
+		line-height: 32px;
+		margin-bottom: 0;
+	}
+	.content__button{
+		position: absolute;
+		width: 17.125rem;
+		height: 17.125rem;
+		right: 10.3125rem;
+		bottom: 8.1875rem;
+		z-index: 2;
+	}
+	.content__button::before{
+		content: '';
+		position: absolute;
+		border-radius: 50%;
+		background-color: var(--white);
+		opacity: 10.36%;
+		width: 17.125rem;
+		height: 17.125rem;
+		z-index: -1;
+		transition: 250ms ease-in-out;
+		pointer-events: none;
+	}
+	.content__button:hover::before{
+		width: 28.125rem;
+		height: 28.125rem;	
+	}
+	.content__button__text{
+		font-size: 2rem;
+		letter-spacing: 2px;
+	}
+}
+
+@media only screen and (min-width: 62em) and (max-width: 72em){
+	.content__button{
+		right: 6rem;
+	}
+	.header__content__text{
+		left: 6rem;
+	}
+}
