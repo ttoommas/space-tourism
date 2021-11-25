@@ -1,3 +1,3 @@
 # space-tourism
 
-# url : (Live Site: Github) []
+# Live Site URL : [Live Site - Github](https://ttoommas.github.io/space-tourism/)
